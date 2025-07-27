@@ -1,0 +1,187 @@
+/* Reset & global styles */
+body, html {
+  font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
+  background-color: #f8fafd;
+  color: #333;
+}
+
+/* Navbar */
+.w3-bar {
+  background-color: #e3f2fd !important;
+  z-index: 1000;
+}
+
+.w3-bar .w3-button {
+  color: #0d47a1;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.w3-bar .w3-button:hover {
+  background-color: #bbdefb !important;
+  color: #0d47a1 !important;
+  z-index: 1000;
+}
+
+/* Parallax background section */
+.bgimg-1 {
+  background-image: url("img/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+#city-life {
+  background-color: rgba(13, 71, 161, 0.8);
+  color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+/* Horizontal scroll gallery */
+#scroll {
+  display: flex;
+  overflow-x: auto;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: #ffffff;
+  scroll-snap-type: x mandatory;
+}
+
+#scroll img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+#scroll img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Section titles */
+h3 {
+  color: #0d47a1;
+  margin: 2rem 0 1rem;
+  font-size: 1.8rem;
+}
+
+/* Modal */
+.w3-modal-content {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.w3-modal-content img {
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 10px;
+}
+
+/* Card Gallery */
+.gallery-block {
+  background-color: #e3f2fd;
+  padding: 60px 0;
+}
+
+.cards-gallery .heading h2 {
+  color: #0d47a1;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.hr {
+  width: 80px;
+  border: 2px solid #64b5f6;
+  margin: 0 auto 2rem;
+}
+
+.card {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  background-color: #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card-body h6 a {
+  color: #0d47a1;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card-body h6 a:hover {
+  color: #1565c0;
+}
+
+.text-muted {
+  font-size: 0.9rem;
+  color: #607d8b !important;
+}
+
+/* Card Layout */
+.row.cards-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 0 2rem;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Footer */
+footer {
+  background-color: #bbdefb;
+  padding: 2rem 0;
+  color: #0d47a1;
+}
+
+footer .w3-button {
+  background-color: #0d47a1;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+footer .w3-button:hover {
+  background-color: #1565c0;
+}
+
+footer .w3-xlarge i {
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+footer .w3-xlarge i:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #scroll img {
+    height: 150px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .row.cards-gallery {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+}
